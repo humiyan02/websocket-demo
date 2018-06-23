@@ -1,2 +1,1 @@
-cd build
-docker build -t lrutten/nodejs_ws .
+docker build -t websocket-demo .
