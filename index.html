@@ -5,22 +5,18 @@
   <body>
     <h1>Websocket test</h1>
 
-    <p>
-      Open the console to see what happens.
-    </p>
+    <p>Open the console to see what happens.</p>
 
     <script>
-var ws = new WebSocket('ws://127.0.0.1:8080');
-ws.onopen = function(event) 
-{
-   console.log('open: %s', event);
-   ws.send('something');
-};
-ws.onmessage = function(message) 
-{
-   console.log('received: %s', message);
-}; 
+      // var ws = new WebSocket('ws://127.0.0.1:8080');
+      var ws = new WebSocket('ws://localhost:8080')
+      ws.onopen = function (event) {
+        console.log('open: %s', event)
+        ws.send('console.log("aafdrfrgre")')
+      }
+      ws.onmessage = function (message) {
+        console.log('received: %s', message)
+      }
     </script>
   </body>
 </html>
-

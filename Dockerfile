@@ -1,7 +1,7 @@
 FROM node:alpine
 
 WORKDIR /apps
-RUN npm install ws node-static
+RUN npm install ws node-static node-eval
 ADD index.html /apps/
 ADD server.js /apps/
 
